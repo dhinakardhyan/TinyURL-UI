@@ -37,7 +37,7 @@ function App() {
   };
 
   const copyToClipboard = (code) => {
-    const shortUrl = `http://localhost:7181/r/${code}`;
+    const shortUrl = `https://zealous-dune-036b78200.7.azurestaticapps.net/r/${code}`;
     navigator.clipboard.writeText(shortUrl);
     setCopied(code);
     setTimeout(() => setCopied(null), 2000);
@@ -92,7 +92,7 @@ function App() {
             <p className="empty-state">No URLs found.</p>
           )}
           {urls.map((u) => {
-            const shortUrl = `http://localhost:7181/r/${u.shortCode}`;
+            const shortUrl = `https://zealous-dune-036b78200.7.azurestaticapps.net/r/${u.shortCode}`;
             return (
               <div className="url-card" key={u.id}>
                 <div className="url-card-body">
