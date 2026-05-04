@@ -37,7 +37,7 @@ function App() {
   };
 
   const copyToClipboard = (code) => {
-    const shortUrl = `https://zealous-dune-036b78200.7.azurestaticapps.net/r/${code}`;
+    const shortUrl = `https://tinyurlapi-dhinakar-czfpfubacsh9hafw.southindia-01.azurewebsites.net/r/${code}`;
     navigator.clipboard.writeText(shortUrl);
     setCopied(code);
     setTimeout(() => setCopied(null), 2000);
@@ -85,14 +85,14 @@ function App() {
             setSearch(e.target.value);
             searchUrls(e.target.value);
           }}
-        />
+          />
 
         <div className="url-list">
           {urls.length === 0 && (
             <p className="empty-state">No URLs found.</p>
           )}
           {urls.map((u) => {
-            const shortUrl = `https://zealous-dune-036b78200.7.azurestaticapps.net/r/${u.shortCode}`;
+            const shortUrl = `https://tinyurlapi-dhinakar-czfpfubacsh9hafw.southindia-01.azurewebsites.net/r/${u.shortCode}`;
             return (
               <div className="url-card" key={u.id}>
                 <div className="url-card-body">
